@@ -1,7 +1,7 @@
-package com.magz.backend.config;
+package com.magz.backend.auth.config;
 
 
-import com.magz.backend.service.JwtService;
+import com.magz.backend.auth.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,6 +1,6 @@
-package com.magz.backend.repository;
+package com.magz.backend.common.repository;
 
-import com.magz.backend.entity.User;
+import com.magz.backend.common.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

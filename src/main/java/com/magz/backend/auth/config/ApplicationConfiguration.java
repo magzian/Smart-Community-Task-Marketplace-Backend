@@ -1,7 +1,7 @@
-package com.magz.backend.config;
+package com.magz.backend.auth.config;
 
 
-import com.magz.backend.repository.UserRepository;
+import com.magz.backend.common.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

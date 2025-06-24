@@ -1,4 +1,4 @@
-package com.magz.backend.dto;
+package com.magz.backend.auth.dto;
 
 
 

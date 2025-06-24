@@ -1,10 +1,10 @@
-package com.magz.backend.service;
+package com.magz.backend.auth.service;
 
 
-import com.magz.backend.dto.LoginUserDto;
-import com.magz.backend.dto.RegisterUserDto;
-import com.magz.backend.entity.User;
-import com.magz.backend.repository.UserRepository;
+import com.magz.backend.auth.dto.LoginUserDto;
+import com.magz.backend.auth.dto.RegisterUserDto;
+import com.magz.backend.common.entity.User;
+import com.magz.backend.common.repository.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,12 +1,12 @@
-package com.magz.backend.controller;
+package com.magz.backend.auth.controller;
 
 
-import com.magz.backend.dto.LoginUserDto;
-import com.magz.backend.dto.RegisterUserDto;
-import com.magz.backend.entity.User;
-import com.magz.backend.respones.LoginResponse;
-import com.magz.backend.service.AuthenticationService;
-import com.magz.backend.service.JwtService;
+import com.magz.backend.auth.dto.LoginUserDto;
+import com.magz.backend.auth.dto.RegisterUserDto;
+import com.magz.backend.common.entity.User;
+import com.magz.backend.auth.respones.LoginResponse;
+import com.magz.backend.auth.service.AuthenticationService;
+import com.magz.backend.auth.service.JwtService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

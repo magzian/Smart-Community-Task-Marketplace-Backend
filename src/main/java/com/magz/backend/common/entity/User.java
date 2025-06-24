@@ -1,4 +1,4 @@
-package com.magz.backend.entity;
+package com.magz.backend.common.entity;
 
 
 import jakarta.persistence.*;
@@ -7,6 +7,7 @@ import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
@@ -25,19 +26,91 @@ public class User implements UserDetails {
     private String email;
     private String password;
     private String roles;
+    private String bio;
+    private String location;
+    private String avatarUrl;
+    private Double doerRating;
+    private Double requesterRating;
+    private LocalDateTime joinedAt;
+    private List<String> skills;
 
-    public User(int id, String name, String email, String password, String roles) {
+
+
+    public User(int id, String name, String email, String password, String roles, String bio, String location, String avatarUrl, Double doerRating, Double requesterRating, LocalDateTime joinedAt, List<String> skills) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.roles = roles;
+        this.bio = bio;
+        this.location = location;
+        this.avatarUrl = avatarUrl;
+        this.doerRating = doerRating;
+        this.requesterRating = requesterRating;
+        this.joinedAt = joinedAt;
+        this.skills = skills;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
+    public Double getDoerRating() {
+        return doerRating;
+    }
+
+    public void setDoerRating(Double doerRating) {
+        this.doerRating = doerRating;
+    }
+
+    public Double getRequesterRating() {
+        return requesterRating;
+    }
+
+    public void setRequesterRating(Double requesterRating) {
+        this.requesterRating = requesterRating;
+    }
+
+    public LocalDateTime getJoinedAt() {
+        return joinedAt;
+    }
+
+    public void setJoinedAt(LocalDateTime joinedAt) {
+        this.joinedAt = joinedAt;
+    }
+
+    public List<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
     }
 
     public User() {
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

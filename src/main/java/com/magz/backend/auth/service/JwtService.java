@@ -1,4 +1,4 @@
-package com.magz.backend.service;
+package com.magz.backend.auth.service;
 
 
 import io.jsonwebtoken.Claims;

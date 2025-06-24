@@ -1,4 +1,4 @@
-package com.magz.backend.respones;
+package com.magz.backend.auth.respones;
 
 public class LoginResponse {
 
