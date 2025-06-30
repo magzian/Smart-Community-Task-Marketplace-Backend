@@ -19,7 +19,7 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(nullable = false)
-    private int id;
+    private Long id;
     @Column(nullable = false)
     private String name;
     @Column(unique = true, length = 100, nullable = false)
@@ -35,8 +35,7 @@ public class User implements UserDetails {
     private List<String> skills;
 
 
-
-    public User(int id, String name, String email, String password, String roles, String bio, String location, String avatarUrl, Double doerRating, Double requesterRating, LocalDateTime joinedAt, List<String> skills) {
+    public User(Long id, String name, String email, String password, String roles, String bio, String location, String avatarUrl, Double doerRating, Double requesterRating, LocalDateTime joinedAt, List<String> skills) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -49,6 +48,49 @@ public class User implements UserDetails {
         this.requesterRating = requesterRating;
         this.joinedAt = joinedAt;
         this.skills = skills;
+    }
+
+    public User() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
     public String getBio() {
@@ -107,40 +149,9 @@ public class User implements UserDetails {
         this.skills = skills;
     }
 
-    public User() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of();
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     @Override
@@ -168,15 +179,5 @@ public class User implements UserDetails {
         return UserDetails.super.isEnabled();
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
 }

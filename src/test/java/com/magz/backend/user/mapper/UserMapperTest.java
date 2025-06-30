@@ -23,7 +23,7 @@ public class UserMapperTest {
     @Test
     void testMyUserProfileDto(){
         User user = new User();
-        user.setId(1);
+        user.setId(1L);
         user.setEmail("test@example.com");
         user.setName("Test User");
         user.setBio("This is a bio");
